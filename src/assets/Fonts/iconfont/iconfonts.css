@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'anglefont';
+  src:  url('fonts/anglefont.eot?vkcfwn');
+  src:  url('fonts/anglefont.eot?vkcfwn#iefix') format('embedded-opentype'),
+    url('fonts/anglefont.ttf?vkcfwn') format('truetype'),
+    url('fonts/anglefont.woff?vkcfwn') format('woff'),
+    url('fonts/anglefont.svg?vkcfwn#anglefont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'anglefont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-f:before {
+  content: "\e900";
+}
+.icon-Heart:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-tiktok:before {
+  content: "\e903";
+}
+.icon-youtube:before {
+  content: "\e904";
+}
