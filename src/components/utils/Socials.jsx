@@ -4,10 +4,15 @@ import { TiSocialFacebook } from 'react-icons/ti'
 import { IoLogoTiktok, IoLogoYoutube } from 'react-icons/io5'
 import { FaRegHeart } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
-// props -> handleClick   props.handleClick
-export default function Socials({ handleClick, navInvisible }) {
+// props -> handleClick  {handleClick, popUpClick, navInvisible}
+export default function Socials({openBurger, popUpClick}) {
+    
+    function setVisible() {
+        popUpClick(true)
+    }
+
     return (<div className="menu__icon">
-        <a href="#" className="icon heart" >
+        <a href="#" className="icon heart" onClick={setVisible} >
             <FaRegHeart size={23} />
         </a>
         <div className="icon__spliter posicion__1"></div>
@@ -24,7 +29,7 @@ export default function Socials({ handleClick, navInvisible }) {
             <IoLogoYoutube size={24} />
         </a>
         <div className="icon__spliter posicion__2"></div>
-        <div className="icon burger" onClick={handleClick}>
+        <div className="icon burger" onClick={openBurger}>
             <span className="span"></span>
         </div>
 

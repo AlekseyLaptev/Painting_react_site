@@ -1,4 +1,7 @@
 @import "../../utils/mixin.scss";
+@import "../../utils/fonts.scss";
+
+@include fonts;
 
 .container {
     .shadow {
@@ -169,18 +172,6 @@
             bottom: 30%;
         }
     }
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    src: url(../../assets/Fonts/Poppins/Poppins-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    src: url(../../assets/Fonts/Poppins/Poppins-Medium.ttf);
 }
 
 @media only screen and (min-width: 768px) and (max-width:1500px) {

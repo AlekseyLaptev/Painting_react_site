@@ -7,17 +7,14 @@ import logo from "../../assets/img/logo.png"
 import Socials from "../utils/Socials";
 
 // props vs state
-export default function Menu(/*{toggleSubscribePopUp}*/) {
+export default function Menu(props) {
     //state
     const [burgerVisible, setBurgerVisible] = useState(false)
 
-    function handleClick(e) {
-        setBurgerVisible(!burgerVisible)
-    }
-
     function renderCloseBtn(idx) {
         if (idx == 0) {
-            return (<div className="icon closed" onClick={handleClick}></div>)
+            // кеширование функций (https://reactjs.org/docs/hooks-reference.html#usememo)
+            return (<div className="icon closed" onClick={() => setBurgerVisible(false)}></div>)
         } else {
             return null
         }
@@ -42,9 +39,9 @@ export default function Menu(/*{toggleSubscribePopUp}*/) {
 
                     {sublinks}
                 </ul>
-                <Socials handleClick={handleClick} navInvisible={false}/>
+                <Socials openBurger={setBurgerVisible} popUpClick={props.setpopupVisible} />
             </div>
-            <Socials handleClick={handleClick} navInvisible={true}/>
+            <Socials openBurger={setBurgerVisible} popUpClick={props.setpopupVisible}/>
            
         </div>
 
