@@ -1,0 +1,154 @@
+@import"../../utils/fonts.scss";
+
+.picture_cart__container {
+    width: 430px;
+
+    .cart__img {
+        box-sizing: border-box;
+        height: 431px;
+        border: 3px solid #393939;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .heart__container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 245px;
+
+            .left__heart {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 96px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(3px);
+                border-radius: 150px;
+
+                .heart__icon {
+                    margin-top: 3px;
+                }
+
+                .heart__title {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+            }
+
+            .right__heart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(3px);
+                color: #FFFFFF;
+
+                &:hover {
+                    color: red;
+                }
+
+            }
+        }
+    }
+
+    .title__container {
+        margin-top: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .namePainting {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 162%;
+            color: #3D3D3D;
+        }
+
+        .price_painting {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            text-align: right;
+            color: #3D3D3D;
+        }
+
+    }
+
+    .subtitle__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        .data__picture {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 200%;
+            color: #3D3D3D;
+        }
+
+        .size__picture {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 157%;
+            text-align: right;
+            color: #3D3D3D;
+        }
+    }
+
+    .buy {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 9px;
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF;
+        border: 1px solid #393939;
+
+        &:hover {
+            background: #4137D0;
+
+            .buy__text,
+            .buy__icon {
+                color: #FFFFFF;
+            }
+        }
+
+        & :active {
+            background: #4137D0;
+            box-shadow: 0px 12px 35px rgba(44, 35, 172, 0.55);
+        }
+
+        .buy__icon {
+            color: #393939;
+            margin-top: 2px;
+        }
+
+        .buy__text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #393939;
+        }
+    }
+
+
+}

@@ -1,0 +1,238 @@
+@import "../../utils/fonts.scss";
+@import "../../utils/mixin.scss";
+
+.contact__icon {
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 303px;
+    height: 303px;
+    background-image: url(../../img/Contact_img/mail__icon.png);
+    background-position: center;
+    border-radius: 50%;
+
+    &:last-child {
+        justify-content: center;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        .icon {
+            @include icon;
+            width: 60px;
+            height: 60px;
+        }
+
+        .heart,
+        .facebook,
+        .burger,
+        .icon__spliter {
+            display: none;
+        }
+
+        .tiktok {
+            background-color: #ffffff;
+            color: #000;
+            backdrop-filter: blur(2px);
+
+        }
+
+        .instagram {
+            background-color: #ffffff;
+            color: #BC4A98;
+            backdrop-filter: blur(2px);
+        }
+
+        .youtube {
+            background-color: #ffffff;
+            color: #F13B12;
+            backdrop-filter: blur(2px);
+
+            &:hover {
+                background: #F13B12;
+                color: #ffffff;
+
+            }
+        }
+
+        @include socialsHover(#000, #fff);
+
+    }
+
+    .icon__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 84px;
+        height: 84px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        color: #4039A1;
+        margin-top: 40px;
+
+        &:hover {
+            background-color: #4039A1;
+            color: #ffffff;
+        }
+    }
+
+    .viber__icon {
+        color: #665CAC;
+
+        &:hover {
+            background-color: #665CAC;
+            color: ffffff;
+        }
+    }
+
+    .WhatsApp__icon {
+        color: #4CAF50;
+
+        &:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+    }
+
+    .icon__title {
+        margin-top: 21px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: #595959;
+
+        span {
+            color: #353535;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1500px) {
+
+
+    .contact__icon {
+        width: 230px;
+        height: 230px;
+        margin-top: 10px;
+
+        .menu__icon {
+            gap: 12px;
+
+            .icon {
+                @include icon;
+            }
+
+            .heart,
+            .facebook,
+            .burger,
+            .icon__spliter {
+                display: none;
+            }
+
+            .tiktok {
+                background-color: #ffffff;
+                color: #000;
+                backdrop-filter: blur(2px);
+
+            }
+
+            .instagram {
+                background-color: #ffffff;
+                color: #BC4A98;
+                backdrop-filter: blur(2px);
+            }
+
+            .youtube {
+                background-color: #ffffff;
+                color: #F13B12;
+                backdrop-filter: blur(2px);
+            }
+
+        }
+
+        .icon__container {
+            scale: 0.76;
+            margin-top: 30px;
+        }
+
+        .icon__title {
+            margin-top: 0px;
+            font-size: 18px;
+            line-height: 167%;
+        }
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+
+
+    .contact__icon {
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+        padding-right: 0;
+
+        .menu__icon {
+            gap: 0px;
+
+            .icon {
+                @include icon;
+                scale: 0.67;
+
+            }
+
+            .heart,
+            .facebook,
+            .burger,
+            .icon__spliter {
+                display: none;
+            }
+
+            .tiktok {
+                background-color: #ffffff;
+                color: #000;
+                backdrop-filter: blur(2px);
+                margin-right: -5px;
+
+            }
+
+            .instagram {
+                background-color: #ffffff;
+                color: #BC4A98;
+                backdrop-filter: blur(2px);
+            }
+
+            .youtube {
+                background-color: #ffffff;
+                color: #F13B12;
+                backdrop-filter: blur(2px);
+                margin-left: -5px;
+            }
+
+        }
+
+        .icon__container {
+            scale: 0.5;
+            margin-top: -9px;
+        }
+
+        .icon__title {
+            margin-top: -10px;
+            font-size: 12px;
+            line-height: 167%;
+        }
+    }
+}

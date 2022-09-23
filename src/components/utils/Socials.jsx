@@ -5,6 +5,7 @@ import { IoLogoTiktok, IoLogoYoutube } from 'react-icons/io5'
 import { FaRegHeart } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
 // props -> handleClick  {handleClick, popUpClick, navInvisible}
+
 export default function Socials({openBurger, popUpClick}) {
     
     function setVisible() {

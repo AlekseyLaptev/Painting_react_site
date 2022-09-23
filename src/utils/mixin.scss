@@ -1,16 +1,16 @@
-@mixin socialsHover($heartBackgroundColor,$heartTextColor) {
-    
+@mixin socialsHover($heartBackgroundColor, $heartTextColor) {
+
     .heart {
         font-size: 20px;
         background-color: $heartBackgroundColor;
         color: $heartTextColor;
-        
+
         &:hover {
             background-color: #4137D0;
             color: #fff;
         }
     }
-    
+
     .facebook {
         &:hover {
             background-color: #3B5998;
@@ -54,4 +54,4 @@
     &:hover {
         cursor: pointer;
     }
-  }
+}

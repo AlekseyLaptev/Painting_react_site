@@ -12,14 +12,17 @@ h5,
 h6,
 button,
 ul,
-ol li {
+img,
+ol,
+ul,
+li,
+img {
     margin: 0;
     padding: 0;
     font-weight: inherit;
     font-style: inherit;
     text-decoration: none;
     list-style: none;
-
 }
 
 a {
