@@ -1,0 +1,188 @@
+@import "../../utils/fonts.scss";
+@import "../../utils/mixin.scss";
+
+.paginatia_container {
+    display: flex;
+
+    .paginatia {
+        padding-top: 3px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .left_arrow,
+        .right_arrow {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 1px solid #4137D0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: "<";
+                font-size: 30px;
+                color: #4137D0;
+            }
+
+            &:hover {
+                background-color: #4137D0;
+                cursor: pointer;
+
+                &::before {
+                    color: #FFFFFF;
+                }
+            }
+
+            &:active {
+                box-shadow: 0px 8px 35px rgba(44, 35, 172, 0.4);
+            }
+        }
+
+        .page_number {
+
+            display: flex;
+            align-items: center;
+            background: #F1F1F1;
+            border-radius: 150px;
+            padding: 7px;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 140%;
+                color: #393939;
+                width: 63px;
+                height: 63px;
+                background-color: transparent;
+
+                a {
+                    padding: 15px;
+                }
+
+                &:hover {
+                    background-image: url(../../img/Exhibitions/icon__bg.png);
+                }
+
+                &:active {
+                    background-color: url(../../img/Exhibitions/icon__bg.png);
+                }
+
+            }
+        }
+
+        .right_arrow {
+            &::before {
+                content: ">";
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1500px) {
+    .paginatia_container {
+        padding-top: 24px;
+
+        .paginatia {
+            padding-top: 0px;
+            padding-bottom: 30px;
+            gap: 15px;
+
+            .left_arrow,
+            .right_arrow {
+                width: 44px;
+                height: 44px;
+
+                &::before {
+                    font-size: 22px;
+                }
+            }
+
+            .page_number {
+
+                padding: 3px;
+
+                li {
+                    font-size: 16px;
+                    line-height: 100%;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    border: 1px solid #F1F1F1;
+
+                    a {
+                        padding: 7px;
+                    }
+
+                    &:hover {
+                        background: url(../../img/Exhibitions/icon__bg.png) center center;
+                        border: 1px solid #C6C6C6;
+                    }
+
+                    &:active {
+                        background: url(../../img/Exhibitions/icon__bg.png) center center;
+                    }
+
+                }
+            }
+
+
+        }
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width:767px) {
+    .paginatia_container {
+        padding-top: 20px;
+       
+
+        .paginatia {
+            padding-bottom: 40px;
+            gap: 15px;
+
+            .left_arrow,
+            .right_arrow {
+                width: 44px;
+                height: 44px;
+
+                &::before {
+                    font-size: 22px;
+                }
+            }
+
+            .page_number {
+
+                padding: 3px;
+
+                li {
+                    font-size: 16px;
+                    line-height: 100%;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    border: 1px solid #F1F1F1;
+
+                    a {
+                        padding: 7px;
+                    }
+
+                    &:hover {
+                        background: url(../../img/Exhibitions/icon__bg.png) center center;
+                        border: 1px solid #C6C6C6;
+                    }
+
+                    &:active {
+                        background: url(../../img/Exhibitions/icon__bg.png) center center;
+                    }
+
+                }
+            }
+        }
+    }
+}

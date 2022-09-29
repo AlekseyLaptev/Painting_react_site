@@ -8,11 +8,12 @@ import { useState } from "react";
 
 export default class SliderPainting extends React.Component {
 
-    render() {
+    render(props) {
+        const {Img = Img_1} = this.props
         return (
             <div className="picture_cart__container">
                 <div className="cart__img">
-                    <img src={Img_1} alt="picture" />
+                    <img src={Img} alt="picture" />
                     <div className="heart__container">
                         <div className="left__heart">
                             <div className="heart__icon">

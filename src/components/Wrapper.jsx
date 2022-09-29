@@ -6,6 +6,7 @@ import Contact from "../Pages/Contact/Contact";
 
 import Footer from "./Footer/Footer";
 import Exhibitions from "../Pages/Exhibitions/Exhibitions";
+import Gallery from "../Pages/Gallery/Gallery";
 
 function Wrapper() {
     const [popupVisible, setpopupVisible] = useState(false)
@@ -16,8 +17,9 @@ function Wrapper() {
             <Menu setpopupVisible={setpopupVisible} />
             {popupVisible ? <Popup setpopupVisible={setpopupVisible} /> : null}
              {/* <Painting />  */}
+             <Gallery/>
             {/* <Contact /> */}
-            <Exhibitions/>
+            {/* <Exhibitions/> */}
             <Footer />
         </div>
     );
