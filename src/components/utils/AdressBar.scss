@@ -1,0 +1,64 @@
+@import '../../utils/mixin.scss';
+@import '../../utils/fonts.scss';
+
+.content__container {
+    font-family: 'Poppins';
+
+    .address__bar {
+        height: 40px;
+        background-color: #272727;
+        padding-left: 60px;
+        display: flex;
+        align-items: center;
+
+        .bar__content {
+            display: flex;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 114%;
+
+            li {
+                &:hover>a {
+                    text-decoration: underline;
+                }
+
+                &::before {
+                    content: ">";
+                    width: 2.5px;
+                    height: 5px;
+                    padding: 0 8px;
+                }
+
+                &:first-child::before {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1500px) {
+
+    .content__container {
+        .address__bar {
+            padding-left: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+
+
+    .content__container {
+        .address__bar {
+            height: 29px;
+            padding-left: 19px;
+
+            .bar__content {
+                font-size: 12px;
+                line-height: 133%;
+            }
+        }
+    }
+}

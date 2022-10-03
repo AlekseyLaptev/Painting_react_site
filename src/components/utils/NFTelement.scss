@@ -1,0 +1,86 @@
+@import '../../utils/mixin.scss';
+@import '../../utils/fonts.scss';
+
+.NFT__outerdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .NFT__img {
+        box-sizing: border-box;
+        width: 236px;
+        height: 236px;
+        background: #FDFDFD;
+        border: 3px solid #232323;
+        border-radius: 150px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 54%;
+        }
+    }
+
+    .arrow__right {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: #FFFFFF;
+        border: 2px solid #4137D0;
+        border-radius: 50%;
+        margin-top: -35px;
+
+        &::before {
+            content: ">";
+            font-size: 34px;
+            color: #4137D0;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1500px) {
+    .NFT__outerdiv {
+
+        .NFT__img {
+            width: 226px;
+            height: 226px;
+        }
+
+        .arrow__right {
+            width: 58px;
+            height: 58px;
+
+            &::before {
+                content: ">";
+                font-size: 28px;
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .NFT__outerdiv {
+
+        .NFT__img {
+            width: 148px;
+            height: 148px;
+        }
+
+        .arrow__right {
+            width: 45px;
+            height: 45px;
+            margin-top: -25px;
+
+            &::before {
+                content: ">";
+                font-size: 20px;
+            }
+        }
+    }
+}

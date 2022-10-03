@@ -8,6 +8,7 @@ import Footer from "./Footer/Footer";
 import Exhibitions from "../Pages/Exhibitions/Exhibitions";
 import Gallery from "../Pages/Gallery/Gallery";
 import Bio from "../Pages/Bio/Bio";
+import NFT from "../Pages/NFT/NFT";
 function Wrapper() {
     const [popupVisible, setpopupVisible] = useState(false)
 
@@ -16,11 +17,12 @@ function Wrapper() {
             {/* Menu(setpopupVisible) = <Menu setpopupVisible={setpopupVisible}/>  */}
             <Menu setpopupVisible={setpopupVisible} />
             {popupVisible ? <Popup setpopupVisible={setpopupVisible} /> : null}
-             {/* <Painting />  */}
-             {/* <Gallery/> */}
+            {/* <Painting />  */}
+            {/* <Gallery/> */}
             {/* <Contact /> */}
             {/* <Exhibitions/> */}
-            <Bio/>
+            {/* <Bio/> */}
+            <NFT/>
             <Footer />
         </div>
     );
