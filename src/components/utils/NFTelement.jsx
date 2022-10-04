@@ -8,7 +8,7 @@ export default function NFTelement() {
             <div className="NFT__img">
                 <img src={img_nft} alt="img" />
             </div>
-            <div className="arrow__right"></div>
+            <a href="#" className="arrow__right"></a>
         </div>
 
     )
