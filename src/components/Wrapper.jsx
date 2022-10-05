@@ -10,6 +10,7 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Bio from "../Pages/Bio/Bio";
 import NFT from "../Pages/NFT/NFT";
 import Auction from "../Pages/Auction/Auction";
+import Favorites from "../Pages/Favorites/Favorites";
 
 function Wrapper() {
     const [popupVisible, setpopupVisible] = useState(false)
@@ -25,7 +26,8 @@ function Wrapper() {
             {/* <Exhibitions/> */}
             {/* <Bio/> */}
             {/* <NFT/> */}
-            <Auction />
+            {/* <Auction /> */}
+            <Favorites/>
             <Footer />
         </div>
     );

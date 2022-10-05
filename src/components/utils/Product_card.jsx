@@ -25,8 +25,6 @@ export default class Product_card extends React.Component {
                     <img src={bg_img} alt="img" />
                     <div className="name_Painting">Name of the painting</div>
                     <div className="product_content">Acrylic on panel, Mixed media - Hand signed, Signed in stencil - 1/1 - 2022</div>
-
-
                     <div className="subtitle__container">
                         <div className="bid_wrap">
                             <div className="bid">Current bid</div>
