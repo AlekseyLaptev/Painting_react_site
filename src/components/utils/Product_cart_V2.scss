@@ -41,13 +41,33 @@
     }
 
     .title__container_v2 {
+        position: relative;
         padding-left: 8px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
+        .closeButton {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 39px;
+            height: 39px;
+            background: #EDEDED;
+            cursor: pointer;
+
+            &:hover {
+                color: #EDEDED;
+                background-color: #272727;
+            }
+        }
+
         .content__wrap {
             .name_Painting_v2 {
+                width: 73%;
                 font-weight: 600;
                 font-size: 30px;
                 line-height: 113%;
@@ -97,20 +117,6 @@
         gap: 0px;
         width: 100%;
 
-        .cart_img_v2 {
-
-            img {
-                width: 230px;
-                height: 230px;
-            }
-        }
-
-        .left__heart_v2 {
-            .heart__title_v2 {
-                font-size: 16px;
-            }
-        }
-
         .title__container_v2 {
             .content__wrap {
                 .product_content_v2 {
@@ -122,16 +128,7 @@
             }
 
             .subtitle__container_v2 {
-
-                .product__button_v2 {
-                    width: 161px;
-                    height: 50px;
-
-                    .buy__text_v2 {
-                        font-size: 16px;
-                        line-height: 188%;
-                    }
-                }
+                margin-bottom: 32px;
             }
         }
     }
@@ -149,6 +146,7 @@
             img {
                 width: 294px;
                 height: 294px;
+                margin-top: 50px;
             }
         }
 
@@ -162,6 +160,11 @@
         }
 
         .title__container_v2 {
+            .closeButton {
+                top: -360px;
+                right: 11px;
+            }
+
             .content__wrap {
                 .name_Painting_v2 {
                     font-size: 16px;
@@ -196,6 +199,8 @@
                     }
                 }
             }
+
+
         }
     }
 }

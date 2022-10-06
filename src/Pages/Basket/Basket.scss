@@ -1,0 +1,189 @@
+@import '../../utils/mixin.scss';
+@import '../../utils/fonts.scss';
+
+@include fonts;
+
+.Basket__wrapper {
+    .content__container {
+        margin-bottom: 0px;
+
+        .header {
+            position: relative;
+
+            .img_container {
+                margin-top: -3px;
+
+                img {
+                    width: 100%;
+
+                }
+            }
+
+            h1 {
+                @include H_1;
+            }
+
+            .Basket_posicion {
+                position: absolute;
+                top: 42px;
+                left: 53px;
+            }
+        }
+
+        .Basket {
+            margin: 80px 60px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    .total__container {
+        margin: 0 60px 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #272727;
+        border: 3px solid #272727;
+
+        .total__text {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 113%;
+            color: #FFFFFF;
+            padding-left: 30px;
+        }
+
+        .total_button {
+            width: 207px;
+            height: 50px;
+            margin-right: 15px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            color: #4137D0;
+            background: #FFFFFF;
+
+            &:hover {
+                color: #FFFFFF;
+                background: #4137D0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1500px) {
+    .Basket__wrapper {
+        .content__container {
+            .header {
+                .img_container {
+                    margin-top: -1px;
+                    height: 194px;
+
+                    img {
+                        width: 175%;
+                        height: 100%;
+                        margin-left: -83px;
+
+                    }
+                }
+
+                .Basket_posicion {
+                    top: 33px;
+                    left: 16px;
+                }
+            }
+
+            .Basket {
+                margin: 32px 20px 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+
+        .total__container {
+            margin: 0 20px 60px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #272727;
+            border: 3px solid #272727;
+
+            .total__text {
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 113%;
+                color: #FFFFFF;
+                padding-left: 30px;
+            }
+
+            .total_button {
+                width: 207px;
+                height: 50px;
+                margin-right: 15px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 100%;
+                color: #4137D0;
+                background: #FFFFFF;
+
+                &:hover {
+                    color: #FFFFFF;
+                    background: #4137D0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .Basket__wrapper {
+        .content__container {
+            .header {
+                .img_container {
+                    margin-top: -1px;
+                    height: 140px;
+
+                    img {
+                        width: 175%;
+                        height: 100%;
+                        margin-left: -195px;
+                    }
+                }
+
+                .Basket_posicion {
+                    top: 20px;
+                    left: 18px;
+                }
+            }
+
+            .Basket {
+                margin: 20px;
+            }
+        }
+
+        .total__container {
+            margin: 0 20px 36px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #272727;
+            border: 3px solid #272727;
+
+            .total__text {
+                font-size: 25px;
+                line-height: 136%;
+                padding-left: 0px;
+            }
+
+            .total_button {
+                margin-right: 0px;
+
+            }
+        }
+    }
+}
