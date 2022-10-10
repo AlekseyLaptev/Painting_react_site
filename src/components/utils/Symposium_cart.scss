@@ -1,0 +1,115 @@
+@import '../../utils/mixin.scss';
+@import '../../utils/fonts.scss';
+
+@include fonts;
+
+.symposium_container {
+    box-sizing: border-box;
+    width: 588px;
+    height: 789px;
+
+
+    .container_img {
+        height: 587px;
+        background: #C4C4C4;
+        border: 3px solid #2B2B2B;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .symposium_title {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    .symposium_text {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 140%;
+        color: #000000;
+    }
+
+    .symposium_continue {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #4137D0;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1500px) {
+    .symposium_container {
+        width: 355px;
+        height: 498px;
+        &:last-child{
+            display: none;
+        }
+
+        .container_img {
+            height: 348px;
+        }
+
+        .symposium_title {
+            font-size: 20px;
+            line-height: 130%;
+        }
+
+        .symposium_text {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            line-height: 162%;
+        }
+
+        .symposium_continue {
+            font-size: 18px;
+            line-height: 167%;
+        }
+    }
+}
+
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .symposium_container {
+        width: 318px;
+        height: 441px;
+        &:last-child{
+            display: none;
+        }
+        &:first-child{
+            display: none;
+        }
+
+        .container_img {
+            height: 311px;
+        }
+
+        .symposium_title {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 3px;
+        }
+
+        .symposium_text {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            font-size: 14px;
+            line-height: 143%;
+        }
+
+        .symposium_continue {
+            font-size: 16px;
+            line-height: 188%;
+        }
+    }
+
+}

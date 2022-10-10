@@ -149,6 +149,66 @@
             color: #393939;
         }
     }
+
+    .border_pictures {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 23px;
+        margin-top: 33px;
+        margin-bottom: 24px;
+    }
+
+    .namePainting_V2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        color: #3D3D3D;
+    }
+
+    .data__picture_V2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        color: #3D3D3D;
+    }
+
+    .price_painting_V2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: #3D3D3D;
+    }
+
+    .buy_border {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -5px auto 0;
+        width: 112px;
+        height: 36px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #4137D0;
+        background: transparent;
+
+        &:hover {
+            background: transparent;
+            box-shadow:none;
+            color: #2C22AF;
+        }
+    }
 }
 
 @media only screen and (min-width:768px) and (max-width: 1500px) {
