@@ -17,6 +17,8 @@ import Socials from "../../components/utils/Socials";
 import SliderPainting from "../../components/utils/SliderPainting"
 
 
+import generateNavigationLine from "../../components/utils/Navigation";
+
 function SetActive() {
 
 }
@@ -26,11 +28,7 @@ export default function Painting() {
         <div className="painting__wrapper">
             <div className="content__container">
                 <div className="address__bar">
-                    <ul className="bar__content">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Name of the painting</a></li>
-                    </ul>
+                    {generateNavigationLine(["Home","Gallery","Name of the painting"])}
                 </div>
                 <div className="picture__container">
                     <div className="picture__slider">

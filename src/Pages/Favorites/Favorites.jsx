@@ -5,6 +5,9 @@ import bg_favorites from "../../img/Favorites/bg_favorites.png";
 import Product_card_V2 from "../../components/utils/Product_cart_V2";
 import Paginacia from "../../components/utils/Paginatia";
 
+
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default class Favorites extends React.Component {
     render() {
         const elements= new Array(6).fill(0).map((_, idx) =><Product_card_V2 key={idx}/> );
@@ -12,10 +15,7 @@ export default class Favorites extends React.Component {
             <div className="Favorites__wrapper">
                 <div className="content__container">
                     <div className="address__bar">
-                        <ul className="bar__content">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Favorites</a></li>
-                        </ul>
+                        {generateNavigationLine(["Home","Favorites"])}
                     </div>
                     <header className="header">
                         <div className="img_container">

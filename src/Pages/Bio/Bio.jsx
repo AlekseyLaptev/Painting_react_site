@@ -5,15 +5,14 @@ import bg_img_2 from '../../img/Bio/bg_bio_main.png';
 import img_video from '../../img/Bio/bio_main_2.png';
 import circle from '../../img/Bio/bio_circle.png';
 
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default function Bio() {
     return (
         <div className="bio__wrapper">
             <div className="content__container">
                 <div className="address__bar">
-                    <ul className="bar__content">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Bio</a></li>
-                    </ul>
+                {generateNavigationLine(["Home","Bio"])}
                 </div>
                 <header className="header">
                     <div className="img__container">

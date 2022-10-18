@@ -5,6 +5,7 @@
 
 .NFT__wrapper {
     font-family: 'Poppins';
+    background: #E5E5E5;
 
     .content__container {
         .header {
@@ -30,7 +31,8 @@
         }
 
         .NFT {
-            margin: 70px 60px 50px;
+            margin: 70px 60px 0px;
+            padding-bottom: 50px;
 
             .NFT__content {
                 width: 1253px;
@@ -55,6 +57,7 @@
             .header {
                 .img_container {
                     height: 190px;
+
                     img {
                         width: auto;
                         height: 100%;
@@ -69,7 +72,8 @@
             }
 
             .NFT {
-                margin: 25px 20px 20px;
+                margin: 25px 20px 0px;
+                padding-bottom: 20px;
 
                 .NFT__content {
                     width: 100%;
@@ -87,12 +91,14 @@
 
     }
 }
+
 @media only screen and (min-width:360px) and (max-width:767px) {
     .NFT__wrapper {
         .content__container {
             .header {
                 .img_container {
                     height: 128px;
+
                     img {
                         width: 250%;
                         height: 100%;
@@ -108,6 +114,7 @@
 
             .NFT {
                 margin: 20px 20px 0px;
+                padding-bottom: 0;
 
                 .NFT__content {
                     width: 100%;

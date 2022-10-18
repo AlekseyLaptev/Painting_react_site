@@ -1,23 +1,25 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import "./Auction.scss";
 import "../../components/utils/AdressBar.scss";
+
 import bg_Auction from "../../img/Auction/bg_auction.png";
 import { AiOutlineMenu } from 'react-icons/ai';
 import { CgMenuGridO } from 'react-icons/cg';
+
 import Product_card from "../../components/utils/Product_card";
 import Paginacia from "../../components/utils/Paginatia";
 import BlueSolials from "../../components/utils/BlueSocials";
+import generateNavigationLine from "../../components/utils/Navigation";
 
-export default function Auction() {
+export default function Auction(props) {
     const elements = new Array(4).fill(0).map((_, idx) => <Product_card key={idx} />)
     return (
         <div className="Auction__wrapper">
             <div className="content__container">
                 <div className="address__bar">
-                    <ul className="bar__content">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Auction</a></li>
-                    </ul>
+                    {generateNavigationLine(["Home","Auction"])}
                 </div>
                 <header className="header">
                     <div className="img_container">
@@ -39,7 +41,7 @@ export default function Auction() {
                     </div>
                     <Paginacia />
                 </main>
-                <BlueSolials />
+                <BlueSolials popUpClick={props.setpopupVisible} />
             </div>
         </div >
     )

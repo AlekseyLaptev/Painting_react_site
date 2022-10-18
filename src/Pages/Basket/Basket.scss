@@ -4,8 +4,10 @@
 @include fonts;
 
 .Basket__wrapper {
+    background: #E5E5E5;
+
     .content__container {
-        margin-bottom: 0px;
+        padding-bottom: 70px;
 
         .header {
             position: relative;
@@ -39,7 +41,8 @@
     }
 
     .total__container {
-        margin: 0 60px 70px;
+        margin: 0 60px;
+        
         height: 70px;
         display: flex;
         align-items: center;
@@ -76,6 +79,7 @@
 @media only screen and (min-width:768px) and (max-width:1500px) {
     .Basket__wrapper {
         .content__container {
+            padding-bottom: 60px;
             .header {
                 .img_container {
                     margin-top: -1px;
@@ -104,7 +108,7 @@
         }
 
         .total__container {
-            margin: 0 20px 60px;
+            margin: 0 20px;
             height: 70px;
             display: flex;
             align-items: center;
@@ -138,9 +142,11 @@
         }
     }
 }
+
 @media only screen and (min-width:360px) and (max-width:767px) {
     .Basket__wrapper {
         .content__container {
+            padding-bottom: 35px;
             .header {
                 .img_container {
                     margin-top: -1px;
@@ -165,7 +171,7 @@
         }
 
         .total__container {
-            margin: 0 20px 36px;
+            margin: 0 20px;
             height: 120px;
             display: flex;
             flex-direction: column;

@@ -11,6 +11,33 @@
         }
     }
 
+    .basket {
+        position: relative;
+        font-size: 20px;
+        background-color: $heartBackgroundColor;
+        color: $heartTextColor;
+
+        &:hover {
+            background-color: #4137D0;
+            color: #fff;
+        }
+
+        .basket__sale {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            background-color: red;
+        }
+    }
+
+
+
     .facebook {
         &:hover {
             background-color: #3B5998;
@@ -112,6 +139,7 @@
         font-size: 16px;
         line-height: 175%;
     }
+
     @media only screen and (min-width:360px) and (max-width:767px) {
         font-size: 12px;
         line-height: 167%;

@@ -1,0 +1,116 @@
+@import "../../utils/mixin.scss";
+@import "../../utils/fonts.scss";
+
+@include fonts;
+
+.header_error {
+    background: #E5E5E5;
+    padding-bottom: 108px;
+
+    .img_container {
+        padding-top: 87px;
+        padding-bottom: 70px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .error_title {
+        margin-bottom: 17px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 70%;
+        text-align: center;
+        color: #434343;
+    }
+
+    .error_text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 127%;
+        text-align: center;
+        color: #434343;
+        margin-bottom: 45px;
+    }
+
+    .error {
+        display: block;
+        width: 299px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    button {
+
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 136%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1500px) {
+    .header_error {
+        padding-bottom: 70px;
+
+        .img_container {
+            padding-top: 40px;
+            padding-bottom: 30px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .error_title {
+            margin-bottom: 12px;
+            font-size: 32px;
+            line-height: 80%;
+        }
+
+        .error_text {
+            font-size: 20px;
+            line-height: 140%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .header_error {
+        padding-bottom: 50px;
+
+        .img_container {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            img {
+                width: 150%;
+                margin-left: -90px;
+            }
+        }
+
+        .error_title {
+            margin-bottom: 0px;
+            font-size: 22px;
+            line-height: 127%;
+        }
+
+        .error_text {
+            font-size: 14px;
+            line-height: 143%;
+            margin-bottom: 17px;
+        }
+
+        .error {
+            width: 215px;
+            height: 44px;
+        }
+
+        button {
+            font-size: 16px;
+            line-height: 188%;
+        }
+    }
+}

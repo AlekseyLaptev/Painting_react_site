@@ -5,6 +5,8 @@
 
 .bio__wrapper {
     font-family: 'Poppins';
+    background: #E5E5E5;
+    overflow: hidden;
 
     .content__container {
         .address__bar {
@@ -162,11 +164,13 @@
                 }
 
                 .content__text {
+                    position: relative;
+                    z-index: 1;
                     width: 1500px;
                     @include textSize_18;
                     color: #535353;
                     padding-right: 20px;
-                    margin-bottom: 90px;
+                    padding-bottom: 90px;
                 }
 
             }
@@ -176,7 +180,7 @@
                 position: absolute;
                 bottom: -270px;
                 right: 0;
-                z-index: -1;
+                z-index: 0;
 
                 img {
                     width: 100%;
@@ -317,6 +321,7 @@
                         color: #535353;
                         padding-right: 10px;
                         margin-bottom: 55px;
+                        padding-bottom: 0;
                     }
 
                 }
@@ -449,7 +454,7 @@
                         width: 320px;
                         @include textSize_18;
                         padding-right: 0px;
-                        margin-bottom: 16px;
+                        padding-bottom: 16px;
                     }
 
                 }

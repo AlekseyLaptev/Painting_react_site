@@ -8,6 +8,8 @@ import Paginacia from "../../components/utils/Paginatia";
 import BlueSolials from "../../components/utils/BlueSocials";
 
 
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default function Gallery(props) {
     const elements = new Array(16).fill(0).map((el, idx) => <SliderPainting key={idx} Img={Img} />)
 
@@ -15,10 +17,7 @@ export default function Gallery(props) {
         <div className="gallery__wrapper">
             <div className="content__container">
                 <div className="address__bar">
-                    <ul className="bar__content">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Gallery</a></li>
-                    </ul>
+                    {generateNavigationLine(["Home","Gallery"])}
                 </div>
                 <header className="header">
                     <div className="img__container">
@@ -26,19 +25,19 @@ export default function Gallery(props) {
                     </div>
                     <h1 className="gallery_posicion">gallery</h1>
                 </header>
-                <div class="product__categorie">
-                    <div class="content">
-                        <div class="title_categories">Product categories
-                            <div class="categories__input">
+                <div className="product__categorie">
+                    <div className="content">
+                        <div className="title_categories">Product categories
+                            <div className="categories__input">
 
-                                <div class="select-category">
-                                    <div class="vertical__colomn colomn">
-                                        <div class="colomn__text">Select a category</div>
-                                        <div class="colomn__arrow">
+                                <div className="select-category">
+                                    <div className="vertical__colomn colomn">
+                                        <div className="colomn__text">Select a category</div>
+                                        <div className="colomn__arrow">
                                             <a href="#" ><IoIosArrowDown /></a>
                                         </div>
                                     </div>
-                                    <div class="category_select">
+                                    <div className="category_select">
                                         <p>Category 1</p>
                                         <p>Category 2</p>
                                         <p>Category 3</p>
@@ -47,14 +46,14 @@ export default function Gallery(props) {
                                     </div>
                                 </div>
 
-                                <div class="select-category">
-                                    <div class="vertical__colomn colomn">
-                                        <div class="colomn__text">Year</div>
-                                        <div class="colomn__arrow">
+                                <div className="select-category">
+                                    <div className="vertical__colomn colomn">
+                                        <div className="colomn__text">Year</div>
+                                        <div className="colomn__arrow">
                                             <a href="#" ><IoIosArrowDown /></a>
                                         </div>
                                     </div>
-                                    <div class="category_select">
+                                    <div className="category_select">
                                         <p>2022</p>
                                         <p>2021</p>
                                         <p>2020</p>
@@ -64,34 +63,34 @@ export default function Gallery(props) {
                                     </div>
                                 </div>
 
-                                <div class="select-category">
-                                    <div class="vertical__colomn colomn">
-                                        <div class="colomn__text">Size</div>
-                                        <div class="colomn__arrow">
+                                <div className="select-category">
+                                    <div className="vertical__colomn colomn">
+                                        <div className="colomn__text">Size</div>
+                                        <div className="colomn__arrow">
                                             <a href="#" ><IoIosArrowDown /></a>
                                         </div>
                                     </div>
-                                    <div class="category_select">
+                                    <div className="category_select">
                                         <p>40x50</p>
                                         <p>50x60</p>
                                         <p>60x80</p>
                                     </div>
                                 </div>
-                                <div class="select-category">
-                                    <div class="vertical__colomn colomn_4">
-                                        <div class="price__from">
-                                            <div class="colomn__text">from</div>
-                                            <div class="colomn__price" contenteditable="true">150</div>
-                                            <div class="price__symbol">$</div>
-                                            <div class="colomn__arrow">
+                                <div className="select-category">
+                                    <div className="vertical__colomn colomn_4">
+                                        <div className="price__from">
+                                            <div className="colomn__text">from</div>
+                                            <div className="colomn__price">150</div>
+                                            <div className="price__symbol">$</div>
+                                            <div className="colomn__arrow">
                                                 <a href="#" ><IoIosArrowDown /></a>
                                             </div>
                                         </div>
-                                        <div class="price__from">
-                                            <div class="colomn__text">to</div>
-                                            <div class="colomn__price" contenteditable="true">150</div>
-                                            <div class="price__symbol">$</div>
-                                            <div class="colomn__arrow">
+                                        <div className="price__from">
+                                            <div className="colomn__text">to</div>
+                                            <div className="colomn__price">150</div>
+                                            <div className="price__symbol">$</div>
+                                            <div className="colomn__arrow">
                                                 <a href="#" ><IoIosArrowDown /></a>
                                             </div>
                                         </div>
@@ -109,7 +108,7 @@ export default function Gallery(props) {
                     {elements}
                 </div>
                 <Paginacia />
-                <BlueSolials />
+                <BlueSolials popUpClick={props.setpopupVisible} />
             </div>
         </div>
     );

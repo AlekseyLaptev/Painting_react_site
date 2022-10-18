@@ -208,6 +208,7 @@
 
                     .restangle_img {
                         margin-top: 35px;
+                        margin-right: 180px;
                     }
 
                 }
@@ -411,6 +412,7 @@
                         align-items: flex-start;
 
                         .restangle_img {
+                            margin-right: 10px;
 
                             img {
                                 width: 228px;
@@ -746,6 +748,7 @@
 
                         .NFT__outerdiv {
                             display: none;
+
                             &:last-child {
                                 display: flex;
                             }
@@ -784,7 +787,7 @@
 
                     .symposium_wrap {
                         margin: 0 20px;
-                        
+
                     }
                 }
 

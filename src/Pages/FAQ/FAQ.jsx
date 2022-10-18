@@ -4,6 +4,8 @@ import "../../components/utils/AdressBar.scss";
 import bg_faq from "../../img/FAQ/bg_faq.png";
 
 
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default class FAQ extends React.Component {
     constructor (){
         super();
@@ -19,10 +21,7 @@ export default class FAQ extends React.Component {
             <div className="FAQ__wrapper">
                 <div className="content__container">
                     <div className="address__bar">
-                        <ul className="bar__content">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
+                        {generateNavigationLine(["Home","FAQ"])}
                     </div>
                     <header className="header">
                         <div className="img_container">

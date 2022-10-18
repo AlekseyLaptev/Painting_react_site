@@ -14,6 +14,8 @@ import img_7 from "../../img/Exhibitions/Mask group_6.png";
 import { AiOutlineShareAlt } from 'react-icons/ai';
 
 
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default class Exhibitions extends React.Component {
 
     render() {
@@ -21,11 +23,7 @@ export default class Exhibitions extends React.Component {
             <>
                 <div className="exhibitions__wrapper">
                     <div className="address__bar">
-                        <ul className="bar__content">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Name of the painting</a></li>
-                        </ul>
+                        {generateNavigationLine(["Home","Gallery","Name of the painting"])}
                     </div>
                     <div className="exhibitions__img">
                         <img src={img} alt="img" />
@@ -140,7 +138,7 @@ export default class Exhibitions extends React.Component {
                                 <div className="right_arrow"></div>
                             </div>
                         </div>
-                        <BlueSolials/>
+                        <BlueSolials popUpClick={this.props.setpopupVisible}/>
                     </div>
                 </div>
             </>

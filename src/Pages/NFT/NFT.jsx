@@ -5,16 +5,16 @@ import bg_NFT from '../../img/NFT/bg_NFT.png';
 import NFTelement from "../../components/utils/NFTelement";
 import Paginacia from "../../components/utils/Paginatia"
 
+
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default function NFT() {
     const elements = new Array(12).fill(0).map((_, idx) => <NFTelement key={idx}/>)
     return (
         <div className="NFT__wrapper">
             <div className="content__container">
                 <div className="address__bar">
-                    <ul className="bar__content">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">NFT</a></li>
-                    </ul>
+                    {generateNavigationLine(["Home","NFT"])}
                 </div>
                 <header className="header">
                     <div className="img_container">

@@ -4,6 +4,7 @@ import "./Product_cart_V2.scss";
 import { FaHeart } from 'react-icons/fa';
 import { useState } from "react";
 import { IoCloseOutline } from 'react-icons/io5';
+import {Link} from "react-router-dom";
 
 export default class Product_card_V2 extends React.Component {
 
@@ -28,7 +29,7 @@ export default class Product_card_V2 extends React.Component {
                     <div className="subtitle__container_v2">
                         <div className="price_painting_v2">390.00 USD</div>
                         {buttonVisible ? (<button className="product__button_v2">
-                            <div className="buy__text_v2"> Buy iy now</div>
+                            <Link to="/order"><div className="buy__text_v2"> Buy iy now</div></Link>
                         </button>) : null}
                     </div>
                     {closeVisible ? (<div className="closeButton">

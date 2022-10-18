@@ -208,7 +208,7 @@
             width: 416px;
             padding: 20px;
             background-color: #fff;
-            z-index: 2;
+            z-index: 20;
 
             .title__link {
                 display: flex;
@@ -282,6 +282,7 @@
 
         .menu__icon {
 
+           
             .closed {
                 visibility: visible;
             }
@@ -295,10 +296,6 @@
                 border-color: rgba(255, 255, 255, 0.3);
             }
 
-            .posicion__2 {
-                display: block;
-                margin: 0 12px;
-            }
         }
     }
 }
@@ -329,7 +326,7 @@
             .facebook,
             .tiktok,
             .instagram,
-            .youtube {
+            .youtube{
                 display: none;
             }
 
@@ -357,7 +354,7 @@
             width: 247px;
             padding: 20px;
             background-color: #fff;
-            z-index: 2;
+            z-index: 20;
 
             .menu__icon {
                 display: grid;
@@ -383,12 +380,12 @@
                 }
 
                 .facebook {
-                    order: 6;
+                    order: 3;
                 }
 
                 .burger {
-                    order: 3;
-                    visibility: hidden;
+                    order: 6;
+                    display: none;
                 }
                 a {
                     display: flex;

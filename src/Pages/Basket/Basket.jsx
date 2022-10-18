@@ -4,6 +4,8 @@ import "../../components/utils/AdressBar.scss";
 import bg_basket from "../../img/Basket/bg_basket.png";
 import Product_card_V2 from "../../components/utils/Product_cart_V2";
 
+import generateNavigationLine from "../../components/utils/Navigation";
+
 export default class Basket extends React.Component {
     render() {
         const elements = new Array(4).fill(0).map((_, idx) => <Product_card_V2 heartVisible={false} buttonVisible={false} closeVisible={true} key={idx} />)
@@ -11,10 +13,7 @@ export default class Basket extends React.Component {
             <div className="Basket__wrapper">
                 <div className="content__container">
                     <div className="address__bar">
-                        <ul className="bar__content">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Favorites</a></li>
-                        </ul>
+                        {generateNavigationLine(["Home","Favorites"])}
                     </div>
                     <header className="header">
                         <div className="img_container">

@@ -4,6 +4,7 @@ import img from "../../img/Contact_img/bg.png";
 import Contact_icon from "../../components/utils/Contact_icon.jsx";
 
 
+import generateNavigationLine from "../../components/utils/Navigation";
 
 
 
@@ -11,10 +12,7 @@ export default function Contact() {
     return (
         <div className="contact__wrapper">
             <div className="address__bar">
-                <ul className="bar__content">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
+                {generateNavigationLine(["Home","Contacts"])}
             </div>
             <div className="contact__container">
                 <div className="contact__img">

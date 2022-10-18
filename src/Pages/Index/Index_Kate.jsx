@@ -98,7 +98,7 @@ export default class Index extends React.Component {
                                 {elements_2}
                             </div>
                         </div>
-                        <BlueSolials/>
+                        <BlueSolials popUpClick={this.props.setpopupVisible}/>
                     </main>
                 </div>
             </div>

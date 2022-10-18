@@ -4,8 +4,9 @@
 @include fonts;
 
 .Favorites__wrapper {
+    background: #E5E5E5;
     .content__container {
-        margin-bottom: 40px;
+        padding-bottom: 40px;
 
         .header {
             position: relative;
@@ -42,7 +43,7 @@
 @media only screen and (min-width: 768px) and (max-width:1500px) {
     .Favorites__wrapper {
         .content__container {
-            margin-bottom: 20px;
+            padding-bottom: 20px;
 
             .header {
                 .img_container {
@@ -74,7 +75,7 @@
 @media only screen and (min-width: 360px) and (max-width:767px) {
     .Favorites__wrapper {
         .content__container {
-            margin-bottom: 0px;
+            padding-bottom: 0px;
 
             .header {
                 .img_container {
