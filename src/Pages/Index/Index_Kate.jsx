@@ -6,14 +6,30 @@ import Img_1 from "../../img/Index/img_1.png";
 import Img_2 from "../../img/Index/img_2.png";
 import Img_3 from "../../img/Index/img_3.png";
 import img_4 from "../../img/Index/bg_2.png";
+
+import Mask1 from "../../components/Slider/Slider_img/slide_1.png";
+import Mask2 from "../../components/Slider/Slider_img/slide_2.png";
+import Mask3 from "../../components/Slider/Slider_img/slide_3.png";
+import Mask4 from "../../components/Slider/Slider_img/slide_4.png";
+import Mask5 from "../../components/Slider/Slider_img/slide_5.png";
+
 import SliderPainting from "../../components/utils/SliderPainting";
 import NFTelement from "../../components/utils/NFTelement";
 import Symposium_cart from "../../components/utils/Symposium_cart";
 import BlueSolials from "../../components/utils/BlueSocials";
-
+import { Link } from "react-router-dom";
+import Slider from "../../components/Slider/Slider";
+import SliderElement from "../../components/utils/SliderElement";
 
 export default class Index extends React.Component {
+
+    generateSliderElement(img, idx) {
+        return <SliderElement img={img} key={idx} />;
+        // return <div className="slider-element" key={idx}/>
+    }
+
     render() {
+        const imgs = [Mask1, Mask2, Mask3, Mask4, Mask5, Mask1, Mask2];
         const elements = new Array(3).fill(0).map((_, idx) => <SliderPainting descriptionVisible={false} key={idx} />)
         const elements_1 = new Array(6).fill(0).map((_, idx) => <NFTelement key={idx} />)
         const elements_2 = new Array(3).fill(0).map((_, idx) => < Symposium_cart key={idx} />)
@@ -49,7 +65,7 @@ export default class Index extends React.Component {
                                 <div className="data__picture_V2">(12.05.2020)</div>
                             </div>
                             <div className="price_painting_V2">330.00 USD</div>
-                            <button className="buy_border ">Buy </button>
+                            <Link to="/basket"><button className="buy_border ">Buy </button></Link>
                         </div>
                         <div className="philosophy_container">
                             <div className="Index_title title_posicion_3">philosophy</div>
@@ -98,7 +114,9 @@ export default class Index extends React.Component {
                                 {elements_2}
                             </div>
                         </div>
-                        <BlueSolials popUpClick={this.props.setpopupVisible}/>
+                        <BlueSolials popUpClick={this.props.setpopupVisible} />
+                        <Slider imgs={imgs} sliderElement={this.generateSliderElement} />
+
                     </main>
                 </div>
             </div>

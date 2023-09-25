@@ -110,7 +110,7 @@ export default function Order() {
                             <div className="cost_text">Total:</div>
                             <div className="cost_price">390.00 USD</div>
                         </div>
-                        <button className="order inactive"><Link to="/thanks">order</Link></button>
+                        <Link to="/thanks"><button className="order inactive">order</button></Link>
                     </div>
                 </div>
                 <div className="second_page">

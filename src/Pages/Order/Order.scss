@@ -118,6 +118,7 @@
                             width: 420px;
                             height: 55px;
                             border: 1px solid #E6E6E6;
+                            outline: none;
                         }
 
                     }
@@ -133,6 +134,7 @@
                         border: none;
                         width: 1302px;
                         height: 147px;
+                        outline: none;
                     }
                 }
 
@@ -337,8 +339,6 @@
                         &:hover {
                             background: #B5D3BB;
                         }
-
-                        .img__cart {}
                     }
 
                     ._active {

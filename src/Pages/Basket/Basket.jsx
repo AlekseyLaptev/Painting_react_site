@@ -5,6 +5,7 @@ import bg_basket from "../../img/Basket/bg_basket.png";
 import Product_card_V2 from "../../components/utils/Product_cart_V2";
 
 import generateNavigationLine from "../../components/utils/Navigation";
+import { Link } from "react-router-dom";
 
 export default class Basket extends React.Component {
     render() {
@@ -26,7 +27,7 @@ export default class Basket extends React.Component {
                     </main>
                     <div className="total__container">
                         <div className="total__text">Total: $780</div>
-                        <button className="total_button">make a purchase</button>
+                        <Link to="/order"><button className="total_button">make a purchase</button></Link>
                     </div>
                 </div>
             </div>

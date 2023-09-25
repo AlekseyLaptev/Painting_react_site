@@ -4,16 +4,17 @@ import "./SliderPainting.scss";
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export default class SliderPainting extends React.Component {
 
     render() {
-        const { Img = Img_1, descriptionVisible = true } = this.props
+        const { img = Img_1, descriptionVisible = true } = this.props
         return (
             <div className="picture_cart__container">
                 <div className="cart__img">
-                    <img src={Img} alt="picture" />
+                    <img src={img} alt="picture" />
                     <div className="heart__container">
                         <div className="left__heart">
                             <div className="heart__icon">
@@ -35,19 +36,19 @@ export default class SliderPainting extends React.Component {
                         <div className="data__picture">(12.05.2020)</div>
                         <div className="size__picture">40х50</div>
                     </div>
-                    <button className="buy ">
+                    <Link to="/basket"><button className="buy ">
                         <div className="buy__icon">
                             <HiOutlineShoppingBag size={20} strokeWidth={100} />
                         </div>
                         <div className="buy__text">Buy</div>
-                    </button>
+                    </button></Link>
                 </>) :
                     (<>
                         <div className="border_pictures">|</div>
                         <div className="namePainting_V2">Name of the painting</div>
                         <div className="data__picture_V2">(12.05.2020)</div>
                         <div className="price_painting_V2">330.00 USD</div>
-                        <button className="buy_border ">Buy </button>
+                        <Link to="/basket"><button className="buy_border ">Buy </button></Link>
                     </>)}
             </div>
         )

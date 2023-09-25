@@ -1,0 +1,70 @@
+@import "../../utils/mixin.scss";
+@import "../../utils/fonts.scss";
+
+@include fonts;
+
+.picture_container {
+
+    .img_container {
+        width: 429px;
+        height: 515px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .picture_name {
+        margin-top: 16px;
+    }
+
+    .picture_name,
+    .picture_size {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 144%;
+        color: #1F1F1F;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1500px) {
+    .picture_container {
+        .img_container {
+            width: 349px;
+            height: 419px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .picture_name {
+            margin-top: 10px;
+        }
+
+        .picture_name,
+        .picture_size {
+            font-size: 14px;
+            line-height: 186%;
+        }
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:767px) {
+    .picture_container {
+        .img_container {
+            width: 319px;
+            height: 377px;
+        }
+
+        .picture_name {
+            margin-top: 10px;
+        }
+
+        .picture_name,
+        .picture_size {
+            font-size: 12px;
+            line-height: 217%;
+        }
+    }
+}

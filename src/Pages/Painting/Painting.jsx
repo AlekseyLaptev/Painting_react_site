@@ -1,6 +1,6 @@
 import React from "react";
 import "./Painting.scss"
-import { AiOutlineCheck, AiOutlineCheckCircle,AiOutlineShareAlt } from 'react-icons/ai'
+import { AiOutlineCheck, AiOutlineCheckCircle, AiOutlineShareAlt } from 'react-icons/ai'
 
 import { FaRegHeart, FaHeart } from 'react-icons/fa'
 import PayPal from "../../img/logo/PayPal-Logo.png"
@@ -24,11 +24,12 @@ function SetActive() {
 }
 
 export default function Painting() {
+    const elements = new Array(4).fill(0).map((_, idx) => <SliderPainting key={idx} />)
     return (
         <div className="painting__wrapper">
             <div className="content__container">
                 <div className="address__bar">
-                    {generateNavigationLine(["Home","Gallery","Name of the painting"])}
+                    {generateNavigationLine(["Home", "Gallery", "Name of the painting"])}
                 </div>
                 <div className="picture__container">
                     <div className="picture__slider">
@@ -174,7 +175,7 @@ export default function Painting() {
                 </div>
                 <div className="socials">
                     <div className="social__container">
-                        <div className="social__logo"><AiOutlineShareAlt size={30} fill = {'#4137D0'}/></div>
+                        <div className="social__logo"><AiOutlineShareAlt size={30} fill={'#4137D0'} /></div>
                         <div className="social__content"><a href="#">Share Kate’s art with the world</a></div>
                         <div className="icon__container"><Socials /></div>
                     </div>
@@ -183,10 +184,12 @@ export default function Painting() {
                 <div className="related__painting">
                     <div className="related__title">Related paintings</div>
                     <div className="painting__slider__container">
-                       <SliderPainting/> 
-                      
+                        {elements}
                     </div>
-
+                    <div className="navigation__arrow">
+                        <div className="arrow_left"></div>
+                        <div className="arrow_right"></div>
+                    </div>
                 </div>
             </div>
         </div>

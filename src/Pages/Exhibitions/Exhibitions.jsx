@@ -11,6 +11,7 @@ import img_5 from "../../img/Exhibitions/bg (1).png";
 import img_6 from "../../img/Exhibitions/Mask group_5.png";
 import img_7 from "../../img/Exhibitions/Mask group_6.png";
 
+import { Link } from "react-router-dom";
 import { AiOutlineShareAlt } from 'react-icons/ai';
 
 
@@ -45,7 +46,7 @@ export default class Exhibitions extends React.Component {
                                     <a className="share icon"><AiOutlineShareAlt className="share__size" /></a>
                                     <a className="share__text">Share</a>
                                 </div>
-                                <div className="continue">continue reading</div>
+                                <Link to="/spirituality"><div className="continue">continue reading</div></Link> 
                             </div>
                         </div>
                         <div className="content__restangle_2">
@@ -64,7 +65,7 @@ export default class Exhibitions extends React.Component {
                                     <a className="share icon"><AiOutlineShareAlt className="share__size" /></a>
                                     <a className="share__text">Share</a>
                                 </div>
-                                <div className="continue">continue reading</div>
+                                <Link to="/spirituality"><div className="continue">continue reading</div></Link> 
                             </div>
                         </div>
                         <div className="content__restangle_3">
@@ -82,7 +83,7 @@ export default class Exhibitions extends React.Component {
                                     <a className="share icon"><AiOutlineShareAlt className="share__size" /></a>
                                     <a className="share__text">Share </a>
                                 </div>
-                                <div className="continue">continue reading</div>
+                                <Link to="/spirituality"><div className="continue">continue reading</div></Link> 
                             </div>
                         </div>
                         <div className="restangle__4">
@@ -104,7 +105,7 @@ export default class Exhibitions extends React.Component {
                                     <a className="share icon"><AiOutlineShareAlt className="share__size" /></a>
                                     <a className="share__text">Share</a>
                                 </div>
-                                <div className="continue">continue reading</div>
+                                <Link to="/spirituality"><div className="continue">continue reading</div></Link> 
                             </div>
                         </div>
                         <div className="content__restangle_5">
@@ -122,7 +123,7 @@ export default class Exhibitions extends React.Component {
                                     <a className="share icon"><AiOutlineShareAlt className="share__size" /></a>
                                     <a className="share__text">Share </a>
                                 </div>
-                                <div className="continue">continue reading</div>
+                                <Link to="/spirituality"><div className="continue">continue reading</div></Link> 
                             </div>
                         </div>
                         <div className="paginatia_container">

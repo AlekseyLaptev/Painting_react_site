@@ -28,9 +28,9 @@ export default class Product_card_V2 extends React.Component {
                     </div>
                     <div className="subtitle__container_v2">
                         <div className="price_painting_v2">390.00 USD</div>
-                        {buttonVisible ? (<button className="product__button_v2">
-                            <Link to="/order"><div className="buy__text_v2"> Buy iy now</div></Link>
-                        </button>) : null}
+                        {buttonVisible ? (<Link to="/order"><button className="product__button_v2">
+                            <div className="buy__text_v2"> Buy iy now</div>
+                        </button></Link>) : null}
                     </div>
                     {closeVisible ? (<div className="closeButton">
                         <IoCloseOutline size={26} />
