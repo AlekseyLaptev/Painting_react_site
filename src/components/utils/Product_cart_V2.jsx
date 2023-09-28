@@ -1,15 +1,19 @@
 import React from "react";
+
 import Img_1 from "../../img/Picture_content/slide_1.png";
 import "./Product_cart_V2.scss";
+
 import { FaHeart } from 'react-icons/fa';
-import { useState } from "react";
 import { IoCloseOutline } from 'react-icons/io5';
-import {Link} from "react-router-dom";
 
-export default class Product_card_V2 extends React.Component {
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { deleteElement } from "../../slices/basketSlice";
 
-    render() {
-        const { Img = Img_1, closeVisible = false, heartVisible = true, buttonVisible = true } = this.props
+export default function Product_card_V2(props) {
+        const dispatch = useDispatch()
+        const { id = id, Img = Img_1, closeVisible = false, heartVisible = true, buttonVisible = true } = props
         return (
             <div className="cart__container_v2">
                 <div className="cart_img_v2">
@@ -32,11 +36,16 @@ export default class Product_card_V2 extends React.Component {
                             <div className="buy__text_v2"> Buy iy now</div>
                         </button></Link>) : null}
                     </div>
-                    {closeVisible ? (<div className="closeButton">
+                    {closeVisible ? (<div 
+                    className="closeButton" 
+                    onClick={()=>{
+                        dispatch(deleteElement({
+                            id: id
+                        }))
+                    }}>
                         <IoCloseOutline size={26} />
                     </div>) : null}
                 </div>
             </div>
         )
-    }
 }

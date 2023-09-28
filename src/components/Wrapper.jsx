@@ -21,6 +21,8 @@ import Thanks from "../Pages/Thanks/Thanks";
 import Error from "../Pages/Error/Error";
 import Spirituality from "../Pages/Spirituality/Spirituality";
 import Auction from "../Pages/Auction/Auction";
+import { Provider } from "react-redux";
+import store from "../store";
 
 
 function Wrapper() {
@@ -46,7 +48,7 @@ function Wrapper() {
                     <Route path="auctions" element={<Auctions setpopupVisible={setpopupVisible} />} />
                     <Route path="nft" element={<NFT />} />
                     <Route path="favorites" element={<Favorites />} ></Route>
-                    <Route path="basket" element={<Basket />} />
+                    <Route path="basket" element={<Provider store={store}><Basket /></Provider>} />
                     <Route path="order" element={<Order />}></Route>
                     <Route path="thanks" element={<Thanks />} />
                     <Route path="error" element={<Error />} />

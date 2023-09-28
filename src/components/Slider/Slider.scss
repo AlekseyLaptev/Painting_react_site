@@ -21,28 +21,31 @@
             background: #FFFFFF;
             font-size: 25px;
             border: 1px solid #4137D0;
-            color:#4137D0;
-            &:hover{
+            color: #4137D0;
+
+            &:hover {
                 background: #4137D0;
-                color:#FFFFFF;
+                color: #FFFFFF;
             }
         }
     }
 
     .slider-wrapper {
-        width: 1800px;
-        overflow: hidden;
+        width: 100%;
         margin: 0 auto;
 
         .slider-line {
             display: flex;
+            width: fit-content;
+            margin-left: -165px;
             position: relative;
             gap: 21px;
             left: 0px;
             transition: all 0.5s;
 
-            .slider-element {
-                width: 430px;
+            .picture_cart__container:nth-child(2n) {
+                transform: translateY(-25px);
+
             }
         }
 

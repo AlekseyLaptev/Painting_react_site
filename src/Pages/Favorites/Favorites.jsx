@@ -10,7 +10,7 @@ import generateNavigationLine from "../../components/utils/Navigation";
 
 export default class Favorites extends React.Component {
     render() {
-        const elements= new Array(6).fill(0).map((_, idx) =><Product_card_V2 key={idx}/> );
+        const elements= new Array(6).fill(0).map((_, idx) =><Product_card_V2 id={idx} key={idx}/> );
         return (
             <div className="Favorites__wrapper">
                 <div className="content__container">

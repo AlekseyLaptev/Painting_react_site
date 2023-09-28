@@ -18,21 +18,22 @@ import NFTelement from "../../components/utils/NFTelement";
 import Symposium_cart from "../../components/utils/Symposium_cart";
 import BlueSolials from "../../components/utils/BlueSocials";
 import { Link } from "react-router-dom";
-import Slider from "../../components/Slider/Slider";
+
+import Slider from "../../components/Slider/Slider.jsx";
 import SliderElement from "../../components/utils/SliderElement";
 
 export default class Index extends React.Component {
 
     generateSliderElement(img, idx) {
-        return <SliderElement img={img} key={idx} />;
+        return <SliderPainting img={img} descriptionVisible={false} key={idx} />;
         // return <div className="slider-element" key={idx}/>
     }
 
     render() {
-        const imgs = [Mask1, Mask2, Mask3, Mask4, Mask5, Mask1, Mask2];
-        const elements = new Array(3).fill(0).map((_, idx) => <SliderPainting descriptionVisible={false} key={idx} />)
+        const imgs = [Mask1, Mask2, Mask3, Mask4, Mask5, Mask1, Mask2, Mask3, Mask4, Mask5];
+        // const elements = new Array(3).fill(0).map((_, idx) => <SliderPainting img={Mask3} descriptionVisible={false} key={idx} />)
         const elements_1 = new Array(6).fill(0).map((_, idx) => <NFTelement key={idx} />)
-        const elements_2 = new Array(3).fill(0).map((_, idx) => < Symposium_cart key={idx} />)
+        const elements_2 = new Array(3).fill(0).map((_, idx) => <Symposium_cart key={idx} />)
         return (
             <div className="Index__wrapper">
                 <div className="content__container">
@@ -51,7 +52,7 @@ export default class Index extends React.Component {
                     <main className="Index">
                         <div className="Index_title title_posicion">Gallery</div>
                         <div className="index_slider">
-                            {elements}
+                            <Slider imgs={imgs} sliderElement={this.generateSliderElement} />
                         </div>
                         <div className="Index_title title_posicion_2">New painting</div>
 
@@ -65,7 +66,9 @@ export default class Index extends React.Component {
                                 <div className="data__picture_V2">(12.05.2020)</div>
                             </div>
                             <div className="price_painting_V2">330.00 USD</div>
-                            <Link to="/basket"><button className="buy_border ">Buy </button></Link>
+                            <Link to="/basket"><button className="buy_border " onClick={()=>{
+
+                            }}>Buy </button></Link>
                         </div>
                         <div className="philosophy_container">
                             <div className="Index_title title_posicion_3">philosophy</div>
@@ -115,8 +118,6 @@ export default class Index extends React.Component {
                             </div>
                         </div>
                         <BlueSolials popUpClick={this.props.setpopupVisible} />
-                        <Slider imgs={imgs} sliderElement={this.generateSliderElement} />
-
                     </main>
                 </div>
             </div>

@@ -7,10 +7,10 @@ import { IoIosArrowDown } from 'react-icons/io';
 import Paginacia from "../../components/utils/Paginatia";
 import BlueSolials from "../../components/utils/BlueSocials";
 
-
 import generateNavigationLine from "../../components/utils/Navigation";
 
 export default function Gallery(props) {
+
     const elements = new Array(16).fill(0).map((el, idx) => <SliderPainting key={idx} Img={Img} />)
 
     function OpenCategory(e) {

@@ -10,8 +10,9 @@ import { redirect } from "react-router-dom";
 // visible part
 // slider step
 export default class Slider extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
+        this.props = props;
         this.state = {
             leftPosition: 0
         }
